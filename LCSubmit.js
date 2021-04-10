@@ -15,7 +15,7 @@ for(i=1;i<=69;i++){
     request(url+i,cb);
     count++;
     // console.log(url);
-    console.log(i);
+    // console.log(i);
 }
 
 function cb(error,response,body){
@@ -38,7 +38,7 @@ function parseData(html){
         // link.push(nameis);
         let name = $(prblmlink[j]).text().trim();
         // name=name.substr(2);
-        console.log(name)
+        // console.log(name);
         let ch1=nameis.substr(42);
         let ch=nameis.charAt(nameis.length-1);
         if(!link.includes(ch1)){
@@ -222,7 +222,7 @@ function parseData(html){
             data = data+`<tr><td>${i}</td>`+arr[i];
         }
          let htmla = data+htmlend;
-        console.log(htmla);
+        // console.log(htmla);
         fs.writeFileSync(`./public/allpages/${atrribute}.html`,htmla);}
         
         htmlmaker("A");
